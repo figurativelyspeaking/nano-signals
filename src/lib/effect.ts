@@ -110,7 +110,7 @@ export class Effect<T> {
      */
     process_deps_dirtiness() {
         // Here's my logic. So basically, if this effect was added to queue (where this should be called from)
-        // it would definitely be dirty and not maybe dirty. Therefor it would be run without needing to check, so
+        // it would definitely be dirty and not maybe dirty. Therefore it would be run without needing to check, so
         // it would not call this function. This function is only called when this is maybe dirty.
         // This means that its deps are a mix of either two options:
         // clean sources, maybe derived, clean derived, or dirty deriveds.
